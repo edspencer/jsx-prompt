@@ -50,7 +50,14 @@
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.3",
+    "@changesets/cli": "^2.27.11",
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
     "@types/node": "^22.10.7",
+    "concurrently": "^9.1.2",
+    "rollup": "^4.31.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.36.0",
     "tsx": "^4.19.2"
   }
 }
