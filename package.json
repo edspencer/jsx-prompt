@@ -14,6 +14,7 @@
   "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs.js"
     }
@@ -34,27 +35,31 @@
   "bugs": {
     "url": "https://github.com/edspencer/jsx-prompt/issues"
   },
-  "author": "Ed Spencer(https://edspencer.net)",
+  "author": "Ed Spencer (https://edspencer.net)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/edspencer/jsx-prompt.git"
   },
   "type": "module",
   "dependencies": {
-    "@types/react": "^19.0.7",
-    "@types/react-dom": "^19.0.3",
-    "prettier": "^3.4.2",
-    "react": "19.0.0-rc-45804af1-20241021",
-    "react-dom": "19.0.0-rc-45804af1-20241021",
+    "async_hooks": "^1.0.0",
     "typescript": "^5.7.3"
+  },
+  "peerDependencies": {
+    "react": "19.0.0-rc-65e06cb7-20241218",
+    "react-dom": "19.0.0-rc-65e06cb7-20241218"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.3",
     "@changesets/cli": "^2.27.11",
     "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-typescript": "^12.1.2",
     "@types/node": "^22.10.7",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "concurrently": "^9.1.2",
+    "prettier": "^3.4.2",
     "rollup": "^4.31.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.36.0",

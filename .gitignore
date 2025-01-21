@@ -67,3 +67,5 @@ yarn.lock
 
 # Lint and formatting results
 stylelint.cache
+
+jsx-prompt-*.tgz

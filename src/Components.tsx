@@ -1,9 +1,12 @@
 import * as React from 'react';
-import { formattedRender } from './render';
 
-export function Prompt({ children }: { children: React.ReactNode }) {
-  return typeof window === 'undefined' ? <>{formattedRender(children)}</> : <>{formattedRender(children)}</>;
-}
+type PromptProps = {
+  children?: React.ReactNode;
+};
+
+export const Prompt: React.FC<PromptProps> = ({ children }) => {
+  return children;
+};
 
 export function Purpose({ children }: { children: React.ReactNode }) {
   return <purpose>{children}</purpose>;

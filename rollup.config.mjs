@@ -1,47 +1,41 @@
-import typescript from "rollup-plugin-typescript2";
-import commonjs from "@rollup/plugin-commonjs";
-import peerDepsExternal from "rollup-plugin-peer-deps-external";
+// rollup.config.js
+import typescript from '@rollup/plugin-typescript';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 
-const sharedConfig = {
-  external: ['react', 'react-dom', 'react-dom/server'],
-  plugins: [
-    peerDepsExternal(),
-    typescript({ 
-      useTsconfigDeclarationDir: true,
-      tsconfigOverride: {
-        compilerOptions: {
-          module: "ESNext",
-          target: "es2022",
-          jsx: "react"
-        }
-      }
-    }), 
-    commonjs()
-  ],
-  watch: {
-    include: "src/**",
-  }
-};
-
-/** @type {import('rollup').RollupOptions[]} */
 export default [
   {
-    ...sharedConfig,
-    input: "src/index.ts",
+    input: 'src/index.ts',
     output: {
-      file: "dist/index.js",
-      format: "esm",
-      sourcemap: true,
-    }
+      file: 'dist/index.js',
+      format: 'esm',
+      sourcemap: true
+    },
+    external: ['react', 'react-dom'],
+    plugins: [
+      resolve(),
+      commonjs(),
+      typescript({
+        tsconfig: './tsconfig.json'
+      })
+    ],
+    external: ['react', 'react-dom'] // typically you don't bundle React itself
   },
   {
-    ...sharedConfig,
-    input: "src/index.ts",
+    input: 'src/index.ts',
     output: {
-      file: "dist/index.cjs",
-      format: "cjs",
-      sourcemap: true,
-      exports: 'named'
-    }
+      file: 'dist/index.cjs.js',
+      format: 'cjs',
+      sourcemap: true
+    },
+    external: ['react', 'react-dom'],
+    plugins: [
+      resolve(),
+      commonjs(),
+      typescript({
+        tsconfig: './tsconfig.json'
+      })
+    ],
+    external: ['react', 'react-dom']
   }
 ];
