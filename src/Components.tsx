@@ -12,6 +12,10 @@ export function Purpose({ children }: { children: React.ReactNode }) {
   return <purpose>{children}</purpose>;
 }
 
+export function Background({ children }: { children: React.ReactNode }) {
+  return <background>{children}</background>;
+}
+
 export function Variables({ children }: { children: React.ReactNode }) {
   return <variables>{children}</variables>;
 }
