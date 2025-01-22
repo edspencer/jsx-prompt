@@ -1,5 +1,11 @@
 # jsx-prompt
 
+## 0.2.0
+
+### Minor Changes
+
+- 51d6e4e: Added Background element
+
 ## 0.1.2
 
 ### Patch Changes
