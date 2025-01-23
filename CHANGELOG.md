@@ -1,5 +1,11 @@
 # jsx-prompt
 
+## 0.3.0
+
+### Minor Changes
+
+- 0aef38d: Added setRenderFunction
+
 ## 0.2.0
 
 ### Minor Changes
